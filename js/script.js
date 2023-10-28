@@ -29,9 +29,9 @@ const validate = (e) => { e.preventDefault();
     listaError.appendChild(liError);
     
   }
-//   Text.
-  // else { console.log('ok');}
-// ASK: zmienna w kazdym warunku powinna byc zadeklarowana?!
+    //   Text.
+    // else { console.log('ok');}
+    // ASK: zmienna w kazdym warunku powinna byc zadeklarowana?!
   if (!inputEmail.value.trim()) {
     // console.log("🚀 ~ file: script.js:15 ~ validate ~ inputEmail:", inputEmail);
     errorForm.push('Nie podałeś adresu email');
@@ -48,29 +48,34 @@ const validate = (e) => { e.preventDefault();
     listaError.appendChild(liError);
     console.log("🚀 ~ file: script.js:31 ~ validate ~ listaError:", listaError);
   }
-  // else { console.log('ok');}
+    // else { console.log('ok');}
   if (!inputZgoda1.checked) {
     // console.log("🚀 ~ file: script.js:15 ~ validate ~ zgoda1:", inputZgoda1);
     let liError = document.createElement('li');
     errorForm.push('Zgoda marketingowa numer 1 jest obowiazkowa - zaznacz');
     liError.innerText = 'Zgoda marketingowa numer 1 jest obowiazkowa - zaznacz';
     listaError.appendChild(liError);
-
   }
-  // else { console.log('ok');}
-    
-  // inputEmail.value.foreach((e)=>{console.log(e);})
-  //FIXME
-  // errorForm.foreach((e)=>{console.log(e);})
-  // console.log("🚀 ~ file: script.js:35 ~ validate ~ inputEmail.value.find('@'):", inputEmail.value.find('@'));
-
+    // else { console.log('ok');}
+    // inputEmail.value.foreach((e)=>{console.log(e);})
+    //FIXME
+    // errorForm.foreach((e)=>{console.log(e);})
+    // console.log("🚀 ~ file: script.js:35 ~ validate ~ inputEmail.value.find('@'):", inputEmail.value.find('@'));
     
   if (!inputZgoda1.checked) {
     // console.log("🚀 ~ file: script.js:15 ~ validate ~ zgoda1:", inputZgoda1);
     errorForm.push('Zgoda marketingowa numer 1 jest obowiazkowa - zaznacz');
   } 
-  console.log("🚀 ~ file: script.js:17 ~ validate ~ errorForm:", errorForm);
-};    
+      console.log("🚀 ~ file: script.js:17 ~ validate ~ errorForm:", errorForm);
+  if (listaError.children.length > 0) {
+    console.log("🚀 ~ file: script.js:71 ~ validate ~ listaError.children.length:", listaError.children.length)
+    // event.preventDefault();
+    e.preventDefault();
+  }
+    // else { console.log("🚀 ~ file: script.js:74 ~       validate    ~ listaError.children.length:",listaError.children.length)
+    //     console.log('bledy');
+    // }
+};
 // przeniesione do funkcji validate
 /* 
 let inputNames = document.querySelector('#fullNames');
@@ -106,6 +111,10 @@ const checkboxAutoConfirm = (obiekt) => {
   // ASK: caly warunek powyzszy mozemu zastapic tymi dwoma linijkami
   inputZgoda1.checked = obiekt.target.checked;
   inputZgoda2.checked = obiekt.target.checked;
+
+  inputZgoda1.disabled = obiekt.target.checked;
+  inputZgoda2.disabled = obiekt.target.checked;
+
   console.log("🚀 ~ file: script.js:42 ~ obiekt.target.checked:", obiekt.target.checked);
 
    
