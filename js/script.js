@@ -4,10 +4,9 @@
 let formNewsletter = document.querySelector('.myForm');
 // console.log("🚀 ~ file: script.js:5 ~ formNewsletter:", formNewsletter);
 
-
 const validate = (e) => { e.preventDefault();
-    console.log('LINIA 9:   funkcja validate');
-} 
+  console.log('LINIA 9:   funkcja validate');
+};
 
 let inputNames = document.querySelector('#fullNames');
 let inputEmail = document.querySelector('#email');
@@ -15,55 +14,62 @@ let inputAllZgody = document.querySelector('#allZgody');
 let inputZgoda1 = document.querySelector('#zgoda1');
 let inputZgoda2 = document.querySelector('#zgoda2');
 
-const checkboxAutoConfirm = () => {
-console.log('function checkboxAutoConfirm ');
-// blednie bo tylko przypisani '=' zawsze bedzie tru!
-// if (inputAllZgody = true) {
-// to ok FIXME OK:
-// if (inputAllZgody.checked) {
-    if (inputAllZgody.checked == true) {
+const checkboxAutoConfirm = (obiekt) => {
+  console.log('function checkboxAutoConfirm ');
+  // ask: czy wskazane pobranie wlasnosci na obiektach //do zmiennych?
+  // blednie bo tylko przypisani '=' zawsze bedzie tru!
+  // if (inputAllZgody = true) {
+  // to ok FIXME OK:
+  // if (inputAllZgody.checked) {
+  //   if (inputAllZgody.checked === true) {
+  // kolejny sposob pobrania wlasnosci obiektu przekazanego do funkcji jako parametr
 
+  
+/*   if (obiekt.target.checked === true) {
     inputZgoda1.checked = true;
     inputZgoda2.checked = true;
-    console.log("🚀 ~ file: script.js:23 ~ checkboxAutoConfirm ~  inputZgoda2.checked :",  inputZgoda2.checked )
+    console.log("🚀 ~ file: script.js:23 ~ checkboxAutoConfirm ~  inputZgoda2.checked :", inputZgoda2.checked);
 
-    
-// FIXME OK powyzej warunek nie dziala odznaczenie wsztystkik czemu
-} else { 
-        inputZgoda1.checked = false;
-        inputZgoda2.checked = false;
-        console.log("🚀 ~ file: script.js:30 ~ checkboxAutoConfirm ~ inputZgoda2.checked :", inputZgoda2.checked )
+    // FIXME OK powyzej warunek nie dziala odznaczenie wsztystkik czemu
+  } else {
+    inputZgoda1.checked = false;
+    inputZgoda2.checked = false;
+    console.log("🚀 ~ file: script.js:30 ~ checkboxAutoConfirm ~ inputZgoda2.checked :", inputZgoda2.checked );
+  } */
+  // ASK: caly warunek powyzszy mozemu zastapic tymi dwoma linijkami
+  inputZgoda1.checked = obiekt.target.checked;
+  inputZgoda2.checked = obiekt.target.checked;
+   
 
-    }
-    // if (inputAllZgody.checked === true) {
-//     inputZgoda1.value = true;
-//     inputZgoda2.value = true;
-// }
-}
+  // if (inputAllZgody.checked === true) {
+  //     inputZgoda1.value = true;
+  //     inputZgoda2.value = true;
+  // }
+};
 
 
 
 
 // formNewsletter.addEventListener('submit', (e) => { e.preventDefault();
 formNewsletter.addEventListener('submit', validate);
-    // console.log(e);
+// console.log(e);
 
-    //  inputNames.value;
-    // inputEmail.value;
-    // inputAllZgody.value;
-    // inputZgoda1.value;
-    // inputZgoda2.value;
-    // console.log("🚀 ~ file: script.js:13 ~ inputNames.value:", inputNames);
+//  inputNames.value;
+// inputEmail.value;
+// inputAllZgody.value;
+// inputZgoda1.value;
+// inputZgoda2.value;
+// console.log("🚀 ~ file: script.js:13 ~ inputNames.value:", inputNames);
 
-    // console.log(inputNames.value);
-    // console.log(inputEmail.value);
-    // console.log(inputAllZgody.checked);
-    // console.log(inputZgoda1.checked);
-    // console.log(inputZgoda2.checked);
+// console.log(inputNames.value);
+// console.log(inputEmail.value);
+// console.log(inputAllZgody.checked);
+// console.log(inputZgoda1.checked);
+// console.log(inputZgoda2.checked);
 
-    // if inputNames.value ==="" {
-    //     console.log('nie podałeś imienia i nazwiska')
-    // }
+// if inputNames.value ==="" {
+//     console.log('nie podałeś imienia i nazwiska')
+// }
 
 // });
 inputAllZgody.addEventListener('change', checkboxAutoConfirm );
