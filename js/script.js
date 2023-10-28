@@ -17,13 +17,23 @@ let inputZgoda2 = document.querySelector('#zgoda2');
 
 const checkboxAutoConfirm = () => {
 console.log('function checkboxAutoConfirm ');
-if (inputAllZgody = true) {
+// blednie bo tylko przypisani '=' zawsze bedzie tru!
+// if (inputAllZgody = true) {
+// to ok FIXME OK:
+// if (inputAllZgody.checked) {
+    if (inputAllZgody.checked == true) {
+
     inputZgoda1.checked = true;
     inputZgoda2.checked = true;
-// FIXME nie dziala odznaczenie wsztystkik czemu
+    console.log("🚀 ~ file: script.js:23 ~ checkboxAutoConfirm ~  inputZgoda2.checked :",  inputZgoda2.checked )
+
+    
+// FIXME OK powyzej warunek nie dziala odznaczenie wsztystkik czemu
 } else { 
         inputZgoda1.checked = false;
         inputZgoda2.checked = false;
+        console.log("🚀 ~ file: script.js:30 ~ checkboxAutoConfirm ~ inputZgoda2.checked :", inputZgoda2.checked )
+
     }
     // if (inputAllZgody.checked === true) {
 //     inputZgoda1.value = true;
