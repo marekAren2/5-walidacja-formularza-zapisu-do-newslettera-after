@@ -1,4 +1,4 @@
-
+// HOWTO: pamietaj
 
 
 let formNewsletter = document.querySelector('.myForm');
@@ -10,22 +10,22 @@ let inputZgoda1 = document.querySelector('#zgoda1');
 let inputNames = document.querySelector('#fullNames');
 
 const validate = (e) => { e.preventDefault();
-  console.log('LINIA 9:   funkcja validate');
+  // console.log('LINIA 9:   funkcja validate');
   let inputNames = document.querySelector('#fullNames');
   let inputEmail = document.querySelector('#email');
     // let
   //   console.log("🚀 ~ file: script.js:12 ~ validate ~ inputEmail:", inputEmail);  
-  let errorForm = [];
+  // let errorForm = [];
   let listaError = document.getElementById("error-list");
   listaError.innerHTML = '';
   
   if (!inputNames.value.trim()) {
     // console.log("🚀 ~ file: script.js:15 ~ validate ~ inputNames:", inputNames);
-    errorForm.push('Nie podałeś Imienia i Nazwiska')
-    console.log("🚀 ~ file: script.js:22 ~ validate ~ let listaError:", listaError)
+    // errorForm.push('Nie podałeś Imienia i Nazwiska')
+    // console.log("🚀 ~ file: script.js:22 ~ validate ~ let listaError:", listaError)
     let liError = document.createElement('li');
     liError.innerText = 'Nie podałeś Imienia i Nazwiska';
-    console.log("🚀 ~ file: script.js:25 ~ validate ~ liError.innerText:", liError.innerText)
+    // console.log("🚀 ~ file: script.js:25 ~ validate ~ liError.innerText:", liError.innerText)
     listaError.appendChild(liError);
     
   }
@@ -34,25 +34,25 @@ const validate = (e) => { e.preventDefault();
     // ASK: zmienna w kazdym warunku powinna byc zadeklarowana?!
   if (!inputEmail.value.trim()) {
     // console.log("🚀 ~ file: script.js:15 ~ validate ~ inputEmail:", inputEmail);
-    errorForm.push('Nie podałeś adresu email');
+    // errorForm.push('Nie podałeś adresu email');
     let liError = document.createElement('li');
     liError.innerText = 'Nie podałeś adresu email';
     listaError.appendChild(liError);
-    console.log("🚀 ~ file: script.js:31 ~ validate ~ listaError:", listaError);
+    // console.log("🚀 ~ file: script.js:31 ~ validate ~ listaError:", listaError);
   }
   if (!inputEmail.value.includes('@')) {
     // console.log("🚀 ~ file: script.js:15 ~ validate ~ inputEmail:", inputEmail);
     let liError = document.createElement('li');
-    errorForm.push('Nie podałeś prawidłowego adresu email');
+    // errorForm.push('Nie podałeś prawidłowego adresu email');
     liError.innerText = 'Nie podałeś prawidłowego adresu email';
     listaError.appendChild(liError);
-    console.log("🚀 ~ file: script.js:31 ~ validate ~ listaError:", listaError);
+    // console.log("🚀 ~ file: script.js:31 ~ validate ~ listaError:", listaError);
   }
     // else { console.log('ok');}
   if (!inputZgoda1.checked) {
     // console.log("🚀 ~ file: script.js:15 ~ validate ~ zgoda1:", inputZgoda1);
     let liError = document.createElement('li');
-    errorForm.push('Zgoda marketingowa numer 1 jest obowiazkowa - zaznacz');
+    // errorForm.push('Zgoda marketingowa numer 1 jest obowiazkowa - zaznacz');
     liError.innerText = 'Zgoda marketingowa numer 1 jest obowiazkowa - zaznacz';
     listaError.appendChild(liError);
   }
@@ -64,11 +64,11 @@ const validate = (e) => { e.preventDefault();
     
   if (!inputZgoda1.checked) {
     // console.log("🚀 ~ file: script.js:15 ~ validate ~ zgoda1:", inputZgoda1);
-    errorForm.push('Zgoda marketingowa numer 1 jest obowiazkowa - zaznacz');
+    // errorForm.push('Zgoda marketingowa numer 1 jest obowiazkowa - zaznacz');
   } 
-      console.log("🚀 ~ file: script.js:17 ~ validate ~ errorForm:", errorForm);
+      // console.log("🚀 ~ file: script.js:17 ~ validate ~ errorForm:", errorForm);
   if (listaError.children.length > 0) {
-    console.log("🚀 ~ file: script.js:71 ~ validate ~ listaError.children.length:", listaError.children.length)
+    // console.log("🚀 ~ file: script.js:71 ~ validate ~ listaError.children.length:", listaError.children.length)
     // event.preventDefault();
     e.preventDefault();
   }
@@ -85,7 +85,7 @@ let inputZgoda1 = document.querySelector('#zgoda1');
 let inputZgoda2 = document.querySelector('#zgoda2'); */
 
 const checkboxAutoConfirm = (obiekt) => {
-  console.log('function checkboxAutoConfirm ');
+  // console.log('function checkboxAutoConfirm ');
   
   let inputZgoda2 = document.querySelector('#zgoda2');
   // ask: czy wskazane pobranie wlasnosci na obiektach //do zmiennych?
@@ -115,7 +115,7 @@ const checkboxAutoConfirm = (obiekt) => {
   inputZgoda1.disabled = obiekt.target.checked;
   inputZgoda2.disabled = obiekt.target.checked;
 
-  console.log("🚀 ~ file: script.js:42 ~ obiekt.target.checked:", obiekt.target.checked);
+  // console.log("🚀 ~ file: script.js:42 ~ obiekt.target.checked:", obiekt.target.checked);
 
    
 

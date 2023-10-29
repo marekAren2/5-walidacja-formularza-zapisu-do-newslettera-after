@@ -8,13 +8,14 @@ input {
     margin-top: 5px;
 }
 input[type="checkbox"] {
-    /* display: inline; */
+    display: inline;
 }
 
 label {
 /* ask: nie dziala margin na labebel? */
 /* margin-bottom: 5px; */
 /* margin-top: 5px; */
+/* display: inline; */
 }
 
 
